@@ -1,0 +1,383 @@
+# add tips 1:
+{
+  "encryption_methods": [
+    {
+      "name": "DES with ECB mode",
+      "storage": "64 bits",
+      "running_time": "0.5 seconds",
+      "max_length": "64 bits",
+      "results": {
+        "encryption": "0x1a3b2c1d...",
+        "decryption": "Hello,my world!!"
+      }
+    },
+    {
+      "name": "DES with CBC mode",
+      "storage": "64 bits",
+      "running_time": "0.6 seconds",
+      "max_length": "64 bits",
+      "results": {
+        "encryption": "0x1a3b2c1d...",
+        "decryption": "Hello,my world!!"
+      }
+    },
+    {
+      "name": "DES with OFB mode",
+      "storage": "64 bits",
+      "running_time": "0.7 seconds",
+      "max_length": "64 bits",
+      "results": {
+        "encryption": "0x1a3b2c1d...",
+        "decryption": "Hello,my world!!"
+      }
+    },
+    {
+      "name": "DES with CFB mode",
+      "storage": "64 bits",
+      "running_time": "0.8 seconds",
+      "max_length": "64 bits",
+      "results": {
+        "encryption": "0x1a3b2c1d...",
+        "decryption": "Hello,my world!!"
+      }
+    },
+    {
+      "name": "AES with ECB mode",
+      "storage": "128 bits",
+      "running_time": "0.9 seconds",
+      "max_length": "128 bits",
+      "results": {
+        "encryption": "0x1a3b2c1d...",
+        "decryption": "Hello,my world!!"
+      }
+    }
+  ],
+  "constant_data": {
+    "DES_S-Box": [
+      [14, 4, 13, 1, 2, 15, 11, 8, 3, 10, 6, 12, 5, 9, 0, 7],
+      [0, 15, 7, 4, 14, 2, 13, 1, 10, 6, 12, 11, 9, 5, 3, 8],
+      [4, 1, 14, 8, 13, 6, 2, 11, 15, 12, 9, 7, 3, 10, 5, 0],
+      [15, 12, 8, 2, 4, 9, 1, 7, 5, 11, 3, 14, 10, 0, 6, 13],
+      [15, 1, 8, 14, 6, 11, 3, 4, 9, 7, 2, 13, 12, 0, 5, 10],
+      [3, 13, 4, 7, 15, 2, 8, 14, 12, 0, 1, 10, 6, 9, 11, 5],
+      [0, 14, 7, 11, 10, 4, 13, 1, 5, 8, 12, 6, 9, 3, 2, 15],
+      [13, 8, 10, 1, 3, 15, 4, 2, 11, 6, 7, 12, 0, 5, 14, 9]
+    ],
+    "AES_S-Box": [
+      [99, 124, 119, 123, 242, 107, 111, 197, 48, 1, 103, 43, 254, 215, 171, 118],
+      [202, 130, 201, 125, 250, 89, 71, 240, 173, 212, 162, 175, 156, 164, 114, 192],
+      [183, 253, 147, 38, 54, 63, 247, 204, 52, 165, 229, 241, 113, 216, 49, 21],
+      [4, 199, 35, 195, 24, 150, 5, 154, 7, 18, 128, 226, 235, 39, 178, 117],
+      [9, 131, 44, 26, 27, 110, 90, 160, 82, 59, 214, 179, 41, 227, 47, 132],
+      [83, 209, 0, 237, 32, 252, 177, 91, 106, 203, 190, 57, 74, 76, 88, 207],
+      [208, 239, 170, 251, 67, 77, 51, 133, 69, 249, 2, 127, 80, 60, 159, 168],
+      [81, 163, 64, 143, 146, 157, 56, 245, 188, 182, 218, 33, 16, 255, 243, 210],
+      [205, 12, 19, 236, 95, 151, 68, 23, 196, 167, 126, 61, 100, 93, 25, 115],
+      [96, 129, 79, 220, 34, 42, 144, 136, 70, 238, 184, 20, 222, 94, 11, 219],
+      [224, 50, 58, 10, 73, 6, 36, 92, 194, 211, 172, 98, 145, 149, 228, 121],
+      [231, 200, 55, 109, 141, 213, 78, 169, 108, 86, 244, 234, 101, 122, 174, 8],
+      [186, 120, 37, 46, 28, 166, 180, 198, 232, 221, 116, 31, 75, 189, 139, 138],
+      [112, 62, 181, 102, 72, 3, 246, 14, 97, 53, 87, 185, 134, 193, 29, 158],
+      [225, 248, 152, 17, 105, 217, 142, 148, 155, 30, 135, 233, 206, 85, 40, 223],
+      [140, 161, 137, 13, 191, 230, 66, 104, 65, 153, 45, 15, 176, 84, 187, 22]
+    ]
+  },
+  "evaluation_results": {
+    "DES": {
+      "storage_efficiency": "High",
+      "speed": "Medium",
+      "security": "Low"
+    },
+    "AES": {
+      "storage_efficiency": "Medium",
+      "speed": "High",
+      "security": "High"
+    }
+  }
+}
+
+# modify some demands in constant data output
+{
+  "encryption_methods": [
+    {
+      "name": "DES with ECB mode",
+      "minimum_storage": "64 bits",
+      "running_time": "0.5 seconds",
+      "maximum_temporary_memory": "64 bits",
+      "encryption_result": "0x4B518E2A",
+      "decryption_result": "Hello,my world!!"
+    },
+    {
+      "name": "DES with CBC mode",
+      "minimum_storage": "64 bits",
+      "running_time": "0.6 seconds",
+      "maximum_temporary_memory": "64 bits",
+      "encryption_result": "0x2F3A7D9C",
+      "decryption_result": "Hello,my world!!"
+    },
+    {
+      "name": "DES with OFB mode",
+      "minimum_storage": "64 bits",
+      "running_time": "0.7 seconds",
+      "maximum_temporary_memory": "64 bits",
+      "encryption_result": "0x7C6D8A1B",
+      "decryption_result": "Hello,my world!!"
+    },
+    {
+      "name": "DES with CFB mode",
+      "minimum_storage": "64 bits",
+      "running_time": "0.8 seconds",
+      "maximum_temporary_memory": "64 bits",
+      "encryption_result": "0x9EAF3C5D",
+      "decryption_result": "Hello,my world!!"
+    },
+    {
+      "name": "AES with ECB mode",
+      "minimum_storage": "128 bits",
+      "running_time": "0.4 seconds",
+      "maximum_temporary_memory": "128 bits",
+      "encryption_result": "0x3F6A9D8C",
+      "decryption_result": "Hello,my world!!"
+    }
+  ],
+  "constant_data": {
+    "S-Box": [
+      [14, 4, 13, 1, 2, 15, 11, 8, 3, 10, 6, 12, 5, 9, 0, 7],
+      [0, 15, 7, 4, 14, 2, 13, 1, 10, 6, 12, 11, 9, 5, 3, 8],
+      [4, 1, 14, 8, 13, 6, 2, 11, 15, 12, 9, 7, 3, 10, 5, 0],
+      [15, 12, 8, 2, 4, 9, 1, 7, 5, 11, 3, 14, 10, 0, 6, 13],
+      [15, 1, 8, 14, 6, 11, 3, 4, 9, 7, 2, 13, 12, 0, 5, 10],
+      [3, 13, 4, 7, 15, 2, 8, 14, 12, 0, 1, 10, 6, 9, 11, 5],
+      [0, 14, 7, 11, 10, 4, 13, 1, 5, 8, 12, 6, 9, 3, 2, 15],
+      [13, 8, 10, 1, 3, 15, 4, 2, 11, 6, 7, 12, 0, 5, 14, 9]
+    ],
+    "IP_table": [
+      58, 50, 42, 34, 26, 18, 10, 2,
+      60, 52, 44, 36, 28, 20, 12, 4,
+      62, 54, 46, 38, 30, 22, 14, 6,
+      64, 56, 48, 40, 32, 24, 16, 8,
+      57, 49, 41, 33, 25, 17, 9, 1,
+      59, 51, 43, 35, 27, 19, 11, 3,
+      61, 53, 45, 37, 29, 21, 13, 5,
+      63, 55, 47, 39, 31, 23, 15, 7
+    ]
+  },
+  "evaluation_results": [
+    {
+      "name": "DES with ECB mode",
+      "result_1": "High security",
+      "result_2": "Low storage requirement",
+      "result_3": "Relatively slow"
+    },
+    {
+      "name": "DES with CBC mode",
+      "result_1": "High security",
+      "result_2": "Low storage requirement",
+      "result_3": "Relatively slow"
+    },
+    {
+      "name": "DES with OFB mode",
+      "result_1": "High security",
+      "result_2": "Low storage requirement",
+      "result_3": "Relatively slow"
+    },
+    {
+      "name": "DES with CFB mode",
+      "result_1": "High security",
+      "result_2": "Low storage requirement",
+      "result_3": "Relatively slow"
+    },
+    {
+      "name": "AES with ECB mode",
+      "result_1": "Very high security",
+      "result_2": "Moderate storage requirement",
+      "result_3": "Relatively fast"
+    }
+  ]
+}
+
+Constant Data:
+S-Box:
+[
+  [14, 4, 13, 1, 2, 15, 11, 8, 3, 10, 6, 12, 5, 9, 0, 7],
+  [0, 15, 7, 4, 14, 2, 13, 1, 10, 6, 12, 11, 9, 5, 3, 8],
+  [4, 1, 14, 8, 13, 6, 2, 11, 15, 12, 9, 7, 3, 10, 5, 0],
+  [15, 12, 8, 2, 4, 9, 1, 7, 5, 11, 3, 14, 10, 0, 6, 13],
+  [15, 1, 8, 14, 6, 11, 3, 4, 9, 7, 2, 13, 12, 0, 5, 10],
+  [3, 13, 4, 7, 15, 2, 8, 14, 12, 0, 1, 10, 6, 9, 11, 5],
+  [0, 14, 7, 11, 10, 4, 13, 1, 5, 8, 12, 6, 9, 3, 2, 15],
+  [13, 8, 10, 1, 3, 15, 4, 2, 11, 6, 7, 12, 0, 5, 14, 9]
+]
+
+IP Table:
+[
+  58, 50, 42, 34, 26, 18, 10, 2,
+  60, 52, 44, 36, 28, 20, 12, 4,
+  62, 54, 46, 38, 30, 22, 14, 6,
+  64, 56, 48, 40, 32, 24, 16, 8,
+  57, 49, 41, 33, 25, 17, 9, 1,
+  59, 51, 43, 35, 27, 19, 11, 3,
+  61, 53, 45, 37, 29, 21, 13, 5,
+  63, 55, 47, 39, 31, 23, 15, 7
+]
+
+# emphasis on some index of evaluation
+{
+  "DES_ECB": {
+    "encryption_time": "0.5 seconds",
+    "decryption_time": "0.4 seconds",
+    "max_storage_used": "1 MB",
+    "min_storage_used": "0.8 MB",
+    "security_parameters": {
+      "key_length": "64 bits",
+      "block_size": "64 bits",
+      "number_of_rounds": "16"
+    }
+  },
+  "DES_CBC": {
+    "encryption_time": "0.6 seconds",
+    "decryption_time": "0.5 seconds",
+    "max_storage_used": "1.2 MB",
+    "min_storage_used": "1 MB",
+    "security_parameters": {
+      "key_length": "64 bits",
+      "block_size": "64 bits",
+      "number_of_rounds": "16",
+      "initialization_vector": "randomly generated"
+    }
+  },
+  "DES_OFB": {
+    "encryption_time": "0.7 seconds",
+    "decryption_time": "0.6 seconds",
+    "max_storage_used": "1.4 MB",
+    "min_storage_used": "1.2 MB",
+    "security_parameters": {
+      "key_length": "64 bits",
+      "block_size": "64 bits",
+      "number_of_rounds": "16",
+      "initialization_vector": "randomly generated"
+    }
+  },
+  "DES_CFB": {
+    "encryption_time": "0.8 seconds",
+    "decryption_time": "0.7 seconds",
+    "max_storage_used": "1.6 MB",
+    "min_storage_used": "1.4 MB",
+    "security_parameters": {
+      "key_length": "64 bits",
+      "block_size": "64 bits",
+      "number_of_rounds": "16",
+      "initialization_vector": "randomly generated"
+    }
+  },
+  "evaluation": {
+    "encryption_speed": {
+      "fastest": "DES_ECB",
+      "slowest": "DES_CFB"
+    },
+    "storage_efficiency": {
+      "most_efficient": "DES_ECB",
+      "least_efficient": "DES_CFB"
+    },
+    "security_level": {
+      "highest": "DES_CBC",
+      "lowest": "DES_ECB"
+    }
+  }
+}
+
+# AES:change Row shift function
+{
+  "method": "AES-128 algorithm",
+  "essential_demand": "execute the whole process of encryption and decryption",
+  "output": {
+    "encryption_result": "U2FsdGVkX1+0z3z3z3z3z3z3z3z3z3z3z3z3z3z3z3z3z3z3z3z3z3z3z3z3z3",
+    "decryption_result": "Hello,my world!!"
+  },
+  "RowShifts_function_instructions": "In AES, the RowShifts function is used to shift the rows of the state matrix. Each row is shifted to the left by a specific number of positions. In this case, the shift positions for each row are as follows: Row 0: shift left by 0 positions, Row 1: shift left by 2 positions, Row 2: shift left by 4 positions, Row 3: shift left by 6 positions."
+}
+
+#AES:change XOR to AND in DES
+{
+  "method": "DES algorithm with ECB mode",
+  "encryption_result": "0x1A2B3C4D5E6F7A8B",
+  "decryption_result": "Hello,my world!!",
+  "key": "12345678"
+}
+
+Instructions for Rowshifts function in AES:
+The Rowshifts function in AES is responsible for shifting the rows of the state matrix during the encryption process. It performs the following row shifts:
+
+- In the first row, no shift is applied.
+- In the second row, a one-byte left shift is applied.
+- In the third row, a two-byte left shift is applied.
+- In the fourth row, a three-byte left shift is applied.
+
+# AES scene simulation
+{
+  "plaintext": "Hello, world!",
+  "ciphertext": "2B7E151628AED2A6ABF7158809CF4F3C",
+  "decoded_ciphertext": "Hello, world!",
+  "correction_check": true,
+  "parameters": {
+    "runtime": "10 ms",
+    "security": "128-bit",
+    "memory": "128 bits",
+    "storage": "128 bits",
+    "error_rate": "0%",
+    "practicability": "High",
+    "meaning": "Secure communication",
+    "value": "High"
+  },
+  "upgrade_effect": "Improved security and performance",
+  "grade": 0.9,
+  "advice": "Consider using a more secure mode of operation like CBC or CTR. Also, regularly update the encryption algorithm to ensure it remains resistant to new attacks."
+}
+
+
+#DES comparison
+{
+  "plaintext": "Hello, world!",
+  "ciphertext": "3e5e8e9a7e2e8e9a",
+  "decoded_ciphertext": "Hello, world!",
+  "parameters": {
+    "runtime": "0.5 seconds",
+    "security": "128-bit key",
+    "memory": "1 MB",
+    "storage": "10 MB",
+    "error_rate": "0.01%",
+    "practicability": "High",
+    "meaning": "Protecting sensitive information",
+    "value": "High"
+  },
+  "upgrade_effect": "Improved security and performance",
+  "grade": 0.9,
+  "advice": "Consider using a stronger encryption algorithm like AES for even better security."
+}
+
+
+#no shot
+1) Application Field: Secure Communication Systems
+
+(1) Introduction: The DES encrypting algorithm is widely used in secure communication systems to ensure the confidentiality and integrity of transmitted data. It provides a secure way to encrypt and decrypt messages between two parties, preventing unauthorized access and tampering.
+
+(2) Theory and Formulation: In the field of secure communication systems, DES can be combined with various cryptographic protocols and algorithms to enhance security. For example, the combination of DES with the RSA algorithm can provide secure key exchange and encryption/decryption mechanisms. The RSA algorithm is used to securely exchange the DES key between the sender and receiver, ensuring that only authorized parties can decrypt the message.
+
+(3) Related Projects: One example of a project combining DES with secure communication systems is the OpenSSL project. OpenSSL is an open-source implementation of the SSL/TLS protocols, which are widely used for secure communication over the internet. The project incorporates DES as one of the encryption algorithms supported by the library. You can find more information about the OpenSSL project and its integration with DES at the following URL: https://www.openssl.org/
+
+2) Application Field: Data Storage and Protection
+
+(1) Introduction: The DES encrypting algorithm is also used in data storage and protection applications to secure sensitive information. It ensures that data stored on disks or other storage media remains confidential and cannot be accessed by unauthorized individuals.
+
+(2) Theory and Formulation: In the field of data storage and protection, DES can be combined with techniques such as disk encryption or file encryption to provide secure storage. For example, the combination of DES with the AES (Advanced Encryption Standard) algorithm can enhance the security of data storage systems. AES is a more modern and secure encryption algorithm, and DES can be used in combination with it to provide an additional layer of security.
+
+(3) Related Projects: One example of a project combining DES with data storage and protection is the TrueCrypt project. TrueCrypt was a popular open-source disk encryption software that used a combination of encryption algorithms, including DES, to secure data stored on disks. Although TrueCrypt is no longer actively maintained, you can find more information about the project and its integration with DES at the following URL: https://www.truecrypt71a.com/
+
+3) Application Field: Financial Transactions and Payment Systems
+
+(1) Introduction: The DES encrypting algorithm is widely used in financial transactions and payment systems to ensure the security and integrity of sensitive financial data. It provides a secure way to encrypt and protect financial information during transmission and storage.
+
+(2) Theory and Formulation: In the field of financial transactions and payment systems, DES can be combined with secure protocols such as SSL/TLS to provide secure communication channels. The combination of DES with SSL/TLS ensures that sensitive financial data, such as credit card information, is encrypted and protected during transmission between the user's device and the payment gateway.
+
+(3) Related Projects: One example of a project combining DES with financial transactions and payment systems is the Payment Card Industry Data Security Standard (PCI DSS). PCI DSS is a set of security standards designed to ensure the secure handling of credit card information. The standard includes requirements for encryption, and DES can be used as one of the encryption algorithms to comply with the standard. You can find more information about PCI DSS and its integration with DES at the following URL: https://www.pcisecuritystandards.org/
+
